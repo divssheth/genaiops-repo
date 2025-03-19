@@ -158,7 +158,8 @@ module storageBlobDataReaderRoleToUser 'core/security/role.bicep' = {
   params: {
     principalId: principalId
     roleDefinitionId: '2a2b9908-6ea1-4ae2-8e65-a410df84e7d1' // Storage Blob Data Reader role
-    principalType: principalType // Replace with the correct principal type if needed
+    principalType: 'ServicePrincipal'
+    //principalType: principalType // Replace with the correct principal type if needed
   }
 }
  
@@ -169,7 +170,8 @@ module userAcrRolePush 'core/security/role.bicep' = {
   params: {
     principalId: principalId
     roleDefinitionId: '8311e382-0749-4cb8-b61a-304f252e45ec'
-    principalType: principalType
+    principalType: 'ServicePrincipal'
+    //principalType: principalType
   }
 }
  
@@ -179,7 +181,8 @@ module userAcrRolePull 'core/security/role.bicep' = {
   params: {
     principalId: principalId
     roleDefinitionId: '7f951dda-4ed3-4680-a7ca-43fe172d538d'
-    principalType: principalType
+    principalType: 'ServicePrincipal'
+    //principalType: principalType
   }
 }
  
@@ -189,7 +192,8 @@ module openaiRoleUser 'core/security/role.bicep' = if (!empty(principalId)) {
   params: {
     principalId: principalId
     roleDefinitionId: '5e0bd9bd-7b93-4f28-af87-19fc36ad61bd' //Cognitive Services OpenAI User
-    principalType: principalType
+    principalType: 'ServicePrincipal'
+    //principalType: principalType
   }
 }
  
@@ -199,7 +203,8 @@ module userRoleDataScientist 'core/security/role.bicep' = {
   params: {
     principalId: principalId
     roleDefinitionId: 'f6c7c914-8db3-469d-8ca1-694a8f32e121'
-    principalType: principalType
+    principalType: 'ServicePrincipal'
+    //principalType: principalType
   }
 }
  
@@ -209,7 +214,8 @@ module userRoleSecretsReader 'core/security/role.bicep' = {
   params: {
     principalId: principalId
     roleDefinitionId: 'ea01e6af-a1c1-4350-9563-ad00f8c72ec5'
-    principalType: principalType
+    principalType: 'ServicePrincipal'
+    //principalType: principalType
   }
 }
  
@@ -219,7 +225,8 @@ module userAiSearchRole 'core/security/role.bicep' = if (!empty(principalId)) {
   params: {
     principalId: principalId
     roleDefinitionId: '8ebe5a00-799e-43f5-93ac-243d3dce84a7' //Search Index Data Contributor
-    principalType: principalType
+    principalType: 'ServicePrincipal'
+    //principalType: principalType
   }
 }
  
@@ -229,7 +236,8 @@ module userAiSearchServiceContributor 'core/security/role.bicep' = if (!empty(pr
   params: {
     principalId: principalId
     roleDefinitionId: '7ca78c08-252a-4471-8644-bb5ff32d4ba0' //Search Service Contributor
-    principalType: principalType
+    principalType: 'ServicePrincipal'
+    //principalType: principalType
   }
 }
  
